@@ -14,7 +14,6 @@ let reuseIdentifier = "photoCell"
 var numberOfImages: Int = 0
 
 class AlbumViewController: VirtualTouristViewController, NSFetchedResultsControllerDelegate, MKMapViewDelegate {
-    
     //Outlets
     @IBOutlet weak var noImagesLabel: UILabel!
     @IBOutlet weak var miniMap: MKMapView!
@@ -247,6 +246,7 @@ class AlbumViewController: VirtualTouristViewController, NSFetchedResultsControl
     }
     
     // Implementation of 4 Controllers to detect changes and update accordingly to the Album CollectionViews
+    //
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         insertedIndexPaths = [IndexPath]()
         updatedIndexPaths = [IndexPath]()
